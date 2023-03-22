@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroductionActivity">
+
+    <TextView
+        android:id="@+id/tvDetailsIntro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/chango"
+        android:gravity="center"
+        android:text="for buying and selling cars"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMyCarIntro"
+        app:layout_constraintStart_toStartOf="@+id/tvMyCarIntro"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyCarIntro" />
+
+    <ImageView
+        android:id="@+id/imageIconIntro"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_splash" />
+
+    <TextView
+        android:id="@+id/tvMyCarIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15dp"
+        android:fontFamily="@font/faster_one"
+        android:text="My Car"
+        android:textAllCaps="true"
+        android:textColor="#2196F3"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageIconIntro"
+        app:layout_constraintStart_toStartOf="@+id/imageIconIntro"
+        app:layout_constraintTop_toBottomOf="@+id/imageIconIntro" />
+
+    <LinearLayout
+        android:id="@+id/linearWelcome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape_welcome"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyCarIntro">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/chango"
+            android:text="Welcome....."
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="110dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="65dp"
+            android:background="@drawable/shape_btn_next"
+            android:drawableRight="@drawable/ic_baseline_arrow_circle_right_24"
+            android:fontFamily="@font/blinker_semibold"
+            android:padding="20dp"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
