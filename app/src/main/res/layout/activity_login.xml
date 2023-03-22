@@ -6,4 +6,211 @@
     android:layout_height="match_parent"
     tools:context=".Screen_Login_Register.LoginActivity">
 
+    <TextView
+        android:id="@+id/tvDetailsIntro3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/chango"
+        android:gravity="center"
+        android:text="for buying and selling cars"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMyCarLogin"
+        app:layout_constraintStart_toStartOf="@+id/tvMyCarLogin"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyCarLogin" />
+
+    <TextView
+        android:id="@+id/tvMyCarLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15dp"
+        android:fontFamily="@font/faster_one"
+        android:text="My Car"
+        android:textAllCaps="true"
+        android:textColor="#2196F3"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageIconLoin"
+        app:layout_constraintStart_toStartOf="@+id/imageIconLoin"
+        app:layout_constraintTop_toBottomOf="@+id/imageIconLoin" />
+
+    <ImageView
+        android:id="@+id/imageIconLoin"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_splash" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_welcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailsIntro3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/faster_one"
+            android:text="Login.."
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="33sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/days_one"
+            android:text="Forget Password ?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_btn_next"
+            android:drawableRight="@drawable/ic_baseline_arrow_circle_right_24"
+            android:fontFamily="@font/suez_one"
+            android:padding="20dp"
+            android:text="Sign  in"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgetPassword" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_edit_login"
+            android:drawableRight="@drawable/ic_baseline_person_add_alt_1_24"
+            android:fontFamily="@font/suez_one"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/btnSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGuest"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_edit_login_guest"
+            android:drawableRight="@drawable/ic_baseline_person_pin_24"
+            android:fontFamily="@font/suez_one"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:text="Guest"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <EditText
+            android:id="@+id/edEmailLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:paddingLeft="20dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/shape_edit_login"
+            android:ems="10"
+            android:hint="E-Mail"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="20dp"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_edit_login"
+            android:ems="10"
+            android:hint="Password"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:paddingLeft="20dp"
+            android:drawablePadding="20dp"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="20dp"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/edEmailLogin"
+            app:layout_constraintStart_toStartOf="@+id/edEmailLogin"
+            app:layout_constraintTop_toBottomOf="@+id/edEmailLogin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/shape_edit_login"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView1"
+            app:layout_constraintTop_toTopOf="@+id/textView1">
+
+            <TextView
+                android:id="@+id/tvMerchant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_next"
+                android:fontFamily="@font/suez_one"
+                android:padding="10dp"
+                android:text="Merchant"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/suez_one"
+                android:padding="10dp"
+                android:text="Customer"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

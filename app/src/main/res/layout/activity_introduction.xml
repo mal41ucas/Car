@@ -64,18 +64,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/chango"
             android:text="Welcome....."
             android:textColor="@color/black"
             android:textSize="30sp" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/suez_one"
+            android:text="This application helps you reach many people in the car trade"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
         <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_height="0dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_height="110dp" />
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp">
+
+        </androidx.viewpager2.widget.ViewPager2>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnNext"
