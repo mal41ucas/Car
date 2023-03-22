@@ -23,15 +23,20 @@ public class IntroductionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityIntroductionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.imageIconIntro.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.lefttoright));
-        binding.tvMyCarIntro.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.fadein));
-        binding.tvDetailsIntro.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.fadein));
-        binding.linearWelcome.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.fadein_fast));
 
-        ArrayList<String> arrayList = new ArrayList<>();
         binding.btnNext.setOnClickListener(view -> {
             startActivity(new Intent(getBaseContext(), LoginActivity.class));
             finish();
         });
+
+        Animation();
+    }
+
+    void Animation(){
+
+        binding.imageIconIntro.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.lefttoright));
+        binding.tvMyCarIntro.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.fadein));
+        binding.tvDetailsIntro.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.fadein));
+        binding.linearWelcome.startAnimation(AnimationUtils.loadAnimation(IntroductionActivity.this, R.anim.fadein_fast));
     }
 }
