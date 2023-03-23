@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/suez_one"
         android:text="You can search for the car you want easily through the in-app filter"
         android:textColor="@color/black"

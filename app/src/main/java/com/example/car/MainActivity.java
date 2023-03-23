@@ -3,28 +3,40 @@ package com.example.car;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.animation.AnimationUtils;
 
+import com.example.car.Screen_Login_Register.LoginActivity;
 import com.example.car.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-
+    SharedPreferences preferences;
+    String scan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        preferences = getSharedPreferences("shared",MODE_PRIVATE);
+        scan = preferences.getString("read","");
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     Thread.sleep(3000);
-                    startActivity(new Intent(getBaseContext(), IntroductionActivity.class));
-                    finish();
+                    if (scan.equals("yes")){
+                        startActivity(new Intent(getBaseContext(), LoginActivity.class));
+                        finishAffinity();
+                    } else {
+                        startActivity(new Intent(getBaseContext(), IntroductionActivity.class));
+                        finishAffinity();
+                    }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
