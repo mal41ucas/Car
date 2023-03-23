@@ -30,13 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }).start();
+
         Animation();
     }
 
     void Animation() {
         binding.imageViewIcon.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.lefttoright));
         binding.imageViewTop.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadein));
-        binding.imageViewBottom.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.lefttoright));
+        binding.imageViewBottom.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadein));
         binding.tvDetailsSplash.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadein));
         binding.tvMyCarSplash.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadein));
     }
