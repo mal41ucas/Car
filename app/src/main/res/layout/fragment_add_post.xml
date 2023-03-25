@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="horizontal"
+    tools:context=".Screen_Fragment.AddPostFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edPrice"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Price"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/edModel"
+                app:layout_constraintStart_toStartOf="@+id/edModel"
+                app:layout_constraintTop_toBottomOf="@+id/edYear" />
+
+            <EditText
+                android:id="@+id/edYear"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Year"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/edPrice"
+                app:layout_constraintStart_toStartOf="@+id/edModel"
+                app:layout_constraintTop_toBottomOf="@+id/edModel" />
+
+            <EditText
+                android:id="@+id/edModel"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Model"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/buttonGellary"
+                app:layout_constraintStart_toStartOf="@+id/buttonGellary"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGellary" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcHomeFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCountImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:fontFamily="@font/suez_one"
+                        android:hint="TextView"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonGellary"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_edit_login"
+                android:drawableRight="@drawable/ic_baseline_add_circle_24"
+                android:drawablePadding="-120dp"
+                android:paddingRight="100dp"
+                android:text="ADD image"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
