@@ -9,11 +9,78 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcHomeFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCountImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/shape_bottom_nav"
+                        android:fontFamily="@font/suez_one"
+                        android:gravity="center"
+                        android:hint="0/0"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonGellary"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/shape_edit_login"
+                android:drawableRight="@drawable/ic_baseline_add_circle_24"
+                android:drawablePadding="-90dp"
+                android:fontFamily="@font/trade_winds"
+                android:paddingRight="70dp"
+                android:text="ADD image"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
             <EditText
                 android:id="@+id/edPrice"
@@ -28,6 +95,90 @@
                 app:layout_constraintEnd_toEndOf="@+id/edModel"
                 app:layout_constraintStart_toStartOf="@+id/edModel"
                 app:layout_constraintTop_toBottomOf="@+id/edYear" />
+
+            <EditText
+                android:id="@+id/edType"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Type"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/edModel"
+                app:layout_constraintStart_toStartOf="@+id/edModel"
+                app:layout_constraintTop_toBottomOf="@+id/edPrice" />
+
+            <EditText
+                android:id="@+id/edMileage"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Mileage"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/edModel"
+                app:layout_constraintStart_toStartOf="@+id/edModel"
+                app:layout_constraintTop_toBottomOf="@+id/edType" />
+
+            <EditText
+                android:id="@+id/edLocation"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Your Address"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/edModel"
+                app:layout_constraintStart_toStartOf="@+id/edModel"
+                app:layout_constraintTop_toBottomOf="@+id/edMileage" />
+
+            <EditText
+                android:id="@+id/edDescription"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="23dp"
+                android:gravity="top"
+                app:layout_constraintEnd_toEndOf="@+id/edModel"
+                app:layout_constraintStart_toStartOf="@+id/edModel"
+                app:layout_constraintTop_toBottomOf="@+id/edLocation" />
+
+            <EditText
+                android:id="@+id/edDors"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Number The Doers"
+                android:inputType="number"
+                android:paddingLeft="20dp"
+                app:layout_constraintStart_toStartOf="@+id/edDescription"
+                app:layout_constraintTop_toBottomOf="@+id/edDescription" />
+
+            <EditText
+                android:id="@+id/edCylinders"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_edit_add_post"
+                android:ems="10"
+                android:hint="Cylinders"
+                android:inputType="number"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/edDescription"
+                app:layout_constraintTop_toBottomOf="@+id/edDescription" />
 
             <EditText
                 android:id="@+id/edYear"
@@ -57,64 +208,84 @@
                 app:layout_constraintStart_toStartOf="@+id/buttonGellary"
                 app:layout_constraintTop_toBottomOf="@+id/buttonGellary" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rcHomeFragment"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:orientation="horizontal"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tvCountImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="13dp"
-                        android:fontFamily="@font/suez_one"
-                        android:hint="TextView"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonGellary"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/shape_edit_login"
-                android:drawableRight="@drawable/ic_baseline_add_circle_24"
-                android:drawablePadding="-120dp"
-                android:paddingRight="100dp"
-                android:text="ADD image"
+                android:text="Transmission"
+                android:textSize="25sp"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/cardView"
-                app:layout_constraintStart_toStartOf="@+id/cardView"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+                android:fontFamily="@font/suez_one"
+                app:layout_constraintStart_toStartOf="@+id/edDors"
+                app:layout_constraintTop_toBottomOf="@+id/edDors" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/suez_one"
+                android:text="Full"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <RadioButton
+                    android:id="@+id/radioManuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/chango"
+                    android:text="Manuel"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioAutomatic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/chango"
+                    android:text="Automatic"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioGroup5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:flow_wrapMode="chain2"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+                <RadioButton
+                    android:id="@+id/radioSolar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/chango"
+                    android:text="Solar"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioPetrol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/chango"
+                    android:text="Petrol"
+                    android:textSize="16sp" />
+            </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -46,21 +46,6 @@ public class HomeActivity extends AppCompatActivity {
 
         adapter = new WelcomeAdapter(HomeActivity.this, arrayList);
         binding.viewPagerHome.setAdapter(adapter);
-
-        Car skoda0 = new Car(getResources().getDrawable(R.drawable.skoda));
-        Car golf1 = new Car(getResources().getDrawable(R.drawable.golf));
-        Car mercedes2 = new Car(getResources().getDrawable(R.drawable.mercedes));
-        Car mitsubishi3 = new Car(getResources().getDrawable(R.drawable.mitsubishi));
-        Car kia4 = new Car(getResources().getDrawable(R.drawable.kia));
-        Car hundai5 = new Car(getResources().getDrawable(R.drawable.hundi));
-
-        carArrayList.add(skoda0);
-        carArrayList.add(golf1);
-        carArrayList.add(mercedes2);
-        carArrayList.add(mitsubishi3);
-        carArrayList.add(kia4);
-        carArrayList.add(hundai5);
-        carAdapter = new CarAdapter(getBaseContext(),carArrayList);
-        binding.spinnerType.setAdapter(carAdapter);
+        binding.viewPagerHome.setUserInputEnabled(false);
     }
 }
