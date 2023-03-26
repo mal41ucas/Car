@@ -12,6 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.example.car.R;
+import com.example.car.Screen_Home.HomeActivity;
 import com.example.car.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
@@ -27,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
 
         binding.btnSignIn.setOnClickListener(view -> {
             if (binding.dividerM.getVisibility() == View.VISIBLE) {
+                startActivity(new Intent(getBaseContext(), HomeActivity.class));
+                finishAffinity();
                 Toast.makeText(this, "Merchant", Toast.LENGTH_SHORT).show();
             }
             if (binding.dividerC.getVisibility() == View.VISIBLE) {
