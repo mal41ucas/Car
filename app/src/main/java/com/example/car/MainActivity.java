@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(2500);
                     if (scan.equals("yes")){
                         startActivity(new Intent(getBaseContext(), LoginActivity.class));
                         finishAffinity();
